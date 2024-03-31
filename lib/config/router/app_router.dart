@@ -6,6 +6,11 @@ final appRouter = GoRouter(
   initialLocation: '/',
   routes: [
     GoRoute(
+      path: '/riverpod',
+      name: CounterScreen.name,
+      builder: (context, state) => const CounterScreen(),
+    ),
+    GoRoute(
       path: '/',
       name: HomeScreen.name,
       builder: (context, state) => const HomeScreen(),
@@ -51,9 +56,9 @@ final appRouter = GoRouter(
       builder: (context, state) => const InfiniteScrollScreen(),
     ),
     GoRoute(
-      path: '/riverpod',
-      name: CounterScreen.name,
-      builder: (context, state) => const CounterScreen(),
+      path: '/theme-changer',
+      name: ThemeChangerScreen.name,
+      builder: (context, state) => const ThemeChangerScreen(),
     ),
   ],
 );
